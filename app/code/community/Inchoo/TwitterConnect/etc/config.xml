@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Branko Ajzele <ajzele@gmail.com>
+ * @license http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Inchoo_TwitterConnect>
+            <version>1.0.0.0.0.0</version>
+        </Inchoo_TwitterConnect>
+    </modules>    
+    <global>
+        <models>
+            <inchoo_twitterconnect>
+                <class>Inchoo_TwitterConnect_Model</class>
+            </inchoo_twitterconnect>
+        </models>
+        <blocks>
+            <inchoo_twitterconnect>
+                <class>Inchoo_TwitterConnect_Block</class>
+            </inchoo_twitterconnect>
+        </blocks>
+        <helpers>
+            <inchoo_twitterconnect>
+                <class>Inchoo_TwitterConnect_Helper</class>
+            </inchoo_twitterconnect>
+        </helpers>
+        <resources>
+            <inchoo_twitterconnect_setup>
+                <setup>
+                    <module>Inchoo_TwitterConnect</module>
+                </setup>
+            </inchoo_twitterconnect_setup>
+        </resources>        
+    </global>
+    <frontend>
+        <routers>
+            <inchoo_twitterconnect>
+                <use>standard</use>
+                <args>
+                    <module>Inchoo_TwitterConnect</module>
+                    <frontName>twitterconnect</frontName>
+                </args>
+            </inchoo_twitterconnect>
+        </routers>         
+        <layout>
+            <updates>
+                <inchoo_twitterconnect>
+                    <file>inchoo_twitterconnect.xml</file>
+                </inchoo_twitterconnect>
+            </updates>
+        </layout>
+    </frontend>
+    <default>
+        <inchoo_twitterconnect>
+            <settings>
+                <active><![CDATA[0]]></active>
+                <consumer_key><![CDATA[]]></consumer_key>
+                <consumer_secret><![CDATA[]]></consumer_secret>
+                <callback_url><![CDATA[twitterconnect/callback/handle]]></callback_url>
+                <twitter_oauth_site_url><![CDATA[http://twitter.com/oauth]]></twitter_oauth_site_url>
+                <button_position><![CDATA[9999]]></button_position>
+                <button_style><![CDATA[button]]></button_style>
+                <custom_button_style_img><![CDATA[]]></custom_button_style_img>
+            </settings>          
+        </inchoo_twitterconnect>
+    </default>
+</config>

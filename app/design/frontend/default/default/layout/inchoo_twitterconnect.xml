@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Branko Ajzele <ajzele@gmail.com>
+ * @license http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
+ */
+-->
+<layout version="0.1.0">    
+    <default>
+        <reference name="top.links">
+            <block type="inchoo_twitterconnect/button" name="inchoo_twitterconnect_button" />
+            
+            <action method="addLinkBlock" translate="label title" module="inchoo_twitterconnect">
+                <blockName>inchoo_twitterconnect_button</blockName>
+            </action>
+        </reference>
+    </default>    
+</layout>
